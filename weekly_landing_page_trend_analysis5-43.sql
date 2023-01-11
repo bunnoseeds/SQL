@@ -50,6 +50,18 @@ AND utm_source = 'gsearch'
 AND utm_campaign = 'nonbrand'
 GROUP BY 1; --  grouping to 
 
+-- +--------------------+--------+-------+
+-- | website_session_id | min_pv | count |
+-- +--------------------+--------+-------+
+-- |               9350 |  18598 |     3 |
+-- |               9351 |  18600 |     3 |
+-- |               9352 |  18601 |     4 |
+-- |               9354 |  18611 |     1 |
+-- |               9356 |  18616 |     6 |
+-- |               9357 |  18622 |     1 |
+-- |               9358 |  18623 |     3 |
+-- TO BE CONTINUED...
+
 DROP TABLE IF EXISTS temp_table_w_time;
 CREATE TEMPORARY TABLE temp_table_w_time -- temp table with landing_page and time added
 SELECT t.website_session_id, 
