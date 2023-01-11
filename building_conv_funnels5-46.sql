@@ -26,7 +26,6 @@
 -- Thanks!
 -- -Morgan
 
-
 USE mavenfuzzyfactory;
 
 DROP TABLE IF EXISTS made_it2_progress;
@@ -73,7 +72,7 @@ COUNT(CASE WHEN made_it2_cart=1 THEN made_it2_cart ELSE NULL END)
     AS total_cart_page,
 COUNT(CASE WHEN made_it2_shipping=1 THEN made_it2_shipping ELSE NULL END)
     AS total_shipping_page,
-COUNT (CASE WHEN made_it2_billing=1 THEN made_it2_billing ELSE NULL END)
+COUNT(CASE WHEN made_it2_billing=1 THEN made_it2_billing ELSE NULL END)
     AS total_billing_page,
 COUNT(CASE WHEN made_it2_ty=1 THEN made_it2_ty ELSE NULL END)
     AS total_ty_page
@@ -91,7 +90,7 @@ COUNT(CASE WHEN made_it2_cart=1 THEN made_it2_cart ELSE NULL END)/COUNT(CASE WHE
     AS cart_clk_rate,
 COUNT(CASE WHEN made_it2_shipping=1 THEN made_it2_shipping ELSE NULL END)/COUNT(CASE WHEN made_it2_cart=1 THEN made_it2_cart ELSE NULL END)
     AS shipping_clk_rate,
-COUNT (CASE WHEN made_it2_billing=1 THEN made_it2_billing ELSE NULL END)/COUNT(CASE WHEN made_it2_shipping=1 THEN made_it2_shipping ELSE NULL END)
+COUNT(CASE WHEN made_it2_billing=1 THEN made_it2_billing ELSE NULL END)/COUNT(CASE WHEN made_it2_shipping=1 THEN made_it2_shipping ELSE NULL END)
     AS billing_clk_rate,
 COUNT(CASE WHEN made_it2_ty=1 THEN made_it2_ty ELSE NULL END)/COUNT(CASE WHEN made_it2_shipping=1 THEN made_it2_shipping ELSE NULL END)
     AS ty_clk_rate
