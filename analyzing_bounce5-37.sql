@@ -94,6 +94,18 @@ LEFT JOIN bounced_sess_only s ON -- left join to show null values (which represe
 s.website_session_id = tt.website_session_id
 ORDER BY tt.website_session_id; -- will order it how the order is in temp_table2 (easier to show null values)
 
+-- +--------------------+--------------+-------+
+-- | website_session_id | landing_page | count |
+-- +--------------------+--------------+-------+
+-- |             175251 | /products    |  NULL |
+-- |             175252 | /lander-2    |  NULL |
+-- |             175253 | /home        |  NULL |
+-- |             175254 | /lander-2    |  NULL |
+-- |             175255 | /home        |  NULL |
+-- |             175256 | /lander-2    |     1 |
+-- |             175257 | /lander-3    |  NULL |
+-- TO BE CONTINUED...
+
 SELECT bb.landing_page, 
 COUNT(bb.website_session_id) AS sessions,
 COUNT(b.count) AS bounced_sessions,
