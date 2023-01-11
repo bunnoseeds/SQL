@@ -11,9 +11,10 @@
 -- view one page during their session, this is also called a bounce page
 
 
--- ---------------------------------------------------
+-- ------------------------------------------------------------------------
 -- EMAIL:
---                                        September 5, 2012
+-- SUBJECT: Help Analyzing Conversion Funnels
+--                                                              September 5, 2012
 -- Hi there!
 
 -- I'd like to understand where we lose our gsearch visitors between the new /lander1 
@@ -25,6 +26,9 @@
 
 -- Thanks!
 -- -Morgan
+----------------------------------------------------------------------------
+
+-- SOLUTION:
 
 USE mavenfuzzyfactory;
 
