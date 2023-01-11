@@ -63,6 +63,22 @@ WHERE wp.created_at BETWEEN '2012-08-05' -- data constraints based off email
 ORDER BY ws.website_session_id, wp.created_at) AS sub_query
 GROUP BY 1;
 
+
+-- +--------------------+-----------------+-------------------+----------------------+---------------+-------------------+------------------+-------------+
+-- | website_session_id | made_it2_lander | made_it2_products | made_it2_og_mr_fuzzy | made_it2_cart | made_it2_shipping | made_it2_billing | made_it2_ty |
+-- +--------------------+-----------------+-------------------+----------------------+---------------+-------------------+------------------+-------------+
+-- |              18243 |               1 |                 0 |                    0 |             0 |                 0 |                0 |           0 |
+-- |              18244 |               1 |                 1 |                    1 |             1 |                 1 |                1 |           0 |
+-- |              18245 |               1 |                 0 |                    0 |             0 |                 0 |                0 |           0 |
+-- |              18246 |               1 |                 1 |                    0 |             0 |                 0 |                0 |           0 |
+-- |              18247 |               1 |                 1 |                    1 |             0 |                 0 |                0 |           0 |
+-- |              18249 |               1 |                 0 |                    0 |             0 |                 0 |                0 |           0 |
+-- |              18250 |               1 |                 0 |                    0 |             0 |                 0 |                0 |           0 |
+-- |              18251 |               1 |                 1 |                    1 |             0 |                 0 |                0 |           0 |
+-- |              18252 |               1 |                 1 |                    1 |             1 |                 1 |                1 |           0 |
+-- ... TO BE CONTIN?UED...
+
+
 -- PART 1:
 -- this query will analyze how many customers make it to each step
 SELECT 
