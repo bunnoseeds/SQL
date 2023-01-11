@@ -83,6 +83,14 @@ COUNT(CASE WHEN made_it2_ty=1 THEN made_it2_ty ELSE NULL END)
 FROM
 made_it2_progress;
 
+-- OUTPUT:
+-- +-------------------+--------------------+-------------------+-----------------+---------------------+--------------------+---------------+
+-- | total_lander_page | total_product_page | total_og_mrf_page | total_cart_page | total_shipping_page | total_billing_page | total_ty_page |
+-- +-------------------+--------------------+-------------------+-----------------+---------------------+--------------------+---------------+
+-- |              4493 |               2115 |              1567 |             683 |                 455 |                361 |           158 |
+-- +-------------------+--------------------+-------------------+-----------------+---------------------+--------------------+---------------+
+
+
 -- PART 2:
 -- this query analyzes the click rates going into eachstep
 SELECT 
@@ -99,3 +107,10 @@ COUNT(CASE WHEN made_it2_billing=1 THEN made_it2_billing ELSE NULL END)/COUNT(CA
 COUNT(CASE WHEN made_it2_ty=1 THEN made_it2_ty ELSE NULL END)/COUNT(CASE WHEN made_it2_shipping=1 THEN made_it2_shipping ELSE NULL END)
     AS ty_clk_rate
 FROM made_it2_progress;
+
+-- OUTPUT:
+-- +------------------+-----------------+---------------+-------------------+------------------+-------------+
+--| product_clk_rate | og_mrf_clk_rate | cart_clk_rate | shipping_clk_rate | billing_clk_rate | ty_clk_rate |
+-- +------------------+-----------------+---------------+-------------------+------------------+-------------+
+--|           0.4707 |          0.7409 |        0.4359 |            0.6662 |           0.7934 |      0.4377 |
+-- +------------------+-----------------+---------------+-------------------+------------------+-------------+
