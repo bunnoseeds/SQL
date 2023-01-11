@@ -1,4 +1,4 @@
--- **THIS IS NOT MY ORIGINAL DATA NOR IS IT MY ORIGINAL DATA ANALYSIS
+-- **THIS IS NOT MY ORIGINAL DATA, USED SOLUTIONS WITH ASSISTANCE AS NEEDED
 -- ** UDEMY IS RESPONSIBLE
 
 -- analyzing bounce rates for a start-up e-commerce business
@@ -23,7 +23,7 @@ CREATE TEMPORARY TABLE temp_table  -- finding first pageview_id of each session
 SELECT website_session_id, 
 MIN(website_pageview_id) AS min_pv
 FROM website_pageviews
-WHERE created_at BETWEEN '2014-01-01' AND '2014-02-01'
+WHERE created_at BETWEEN '2014-01-01' AND '2014-02-01'  -- completely arbitrary
 GROUP BY 1; --  grouping to 
 
 DROP TABLE IF EXISTS temp_table2;
