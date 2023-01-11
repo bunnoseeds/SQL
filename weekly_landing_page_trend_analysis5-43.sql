@@ -74,6 +74,18 @@ JOIN website_pageviews w ON
 w.website_pageview_id = t.min_pv
 ;
 
+-- +--------------------+--------+-------+--------------+---------------------+
+-- | website_session_id | min_pv | count | landing_page | created_at          |
+-- +--------------------+--------+-------+--------------+---------------------+
+-- |               9350 |  18598 |     3 | /home        | 2012-06-01 00:05:11 |
+-- |               9351 |  18600 |     3 | /home        | 2012-06-01 00:06:39 |
+-- |               9352 |  18601 |     4 | /home        | 2012-06-01 00:08:27 |
+-- |               9354 |  18611 |     1 | /home        | 2012-06-01 01:08:43 |
+-- |               9356 |  18616 |     6 | /home        | 2012-06-01 01:37:31 |
+-- |               9357 |  18622 |     1 | /home        | 2012-06-01 02:29:33 |
+-- |               9358 |  18623 |     3 | /home        | 2012-06-01 02:39:16 |
+-- TO BE CONTINUED...
+
 DROP TABLE IF EXISTS weekly_bounce_analysis;
 CREATE TEMPORARY TABLE weekly_bounce_analysis; -- bounce analysis by week
 SELECT MIN(DATE(tt.created_at))  -- showing start date of each week
