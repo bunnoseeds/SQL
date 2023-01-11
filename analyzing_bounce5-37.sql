@@ -73,6 +73,18 @@ GROUP BY 1,2
 HAVING count = 1 -- filtering the bounced pages (sessions that have 1 pageview url)
 ;
 
+-- +--------------------+--------------+-------+
+-- | website_session_id | landing_page | count |
+-- +--------------------+--------------+-------+
+-- |             175256 | /lander-2    |     1 |
+-- |             175259 | /home        |     1 |
+-- |             175260 | /lander-2    |     1 |
+-- |             175261 | /lander-3    |     1 |
+-- |             175264 | /lander-2    |     1 |
+-- |             175265 | /home        |     1 |
+-- |             175266 | /lander-2    |     1 |
+-- TO BE CONTINUED...
+
 DROP TABLE IF EXISTS bounced_or_not;
 CREATE TEMPORARY TABLE bounced_or_not
 SELECT tt.website_session_id, tt.landing_page,
