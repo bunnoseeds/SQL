@@ -1,5 +1,7 @@
 -- **THIS IS NOT MY ORIGINAL DATA, used solutions for assistance as needed
 -- ** UDEMY IS RESPONSIBLE
+-- COURSE: Advanced SQL: MySQL Data Analysis & Business Intelligence
+-- by Maven Analytics, John Pauler
 
 -- analyzing bounce rates for a start-up e-commerce business
 -- this data represents multiple user sessions showing the path of webpages
