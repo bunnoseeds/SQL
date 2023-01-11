@@ -28,6 +28,18 @@ FROM website_pageviews
 WHERE created_at BETWEEN '2014-01-01' AND '2014-02-01'  -- completely arbitrary
 GROUP BY 1; --  grouping to 
 
+-- +--------------------+--------+
+-- | website_session_id | min_pv |
+-- +--------------------+--------+
+-- |             175251 | 415127 |
+-- |             175252 | 415126 |
+-- |             175253 | 415128 |
+-- |             175254 | 415134 |
+-- |             175255 | 415136 |
+-- |             175256 | 415141 |
+-- |             175257 | 415145 |
+-- TO BE CONTINUED...
+
 DROP TABLE IF EXISTS temp_table2;
 CREATE TEMPORARY TABLE temp_table2 -- turing pv to url to see landing page of each session 
 SELECT t.website_session_id, 
