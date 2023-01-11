@@ -66,3 +66,13 @@ LEFT JOIN bounced_sess_only b ON
 b.website_session_id = bb.website_session_id
 GROUP BY 1
 ORDER BY 1;
+
+-- OUTPUT:
+-- +--------------+----------+------------------+--------------+
+-- | landing_page | sessions | bounced_sessions | bounced_rate |
+-- +--------------+----------+------------------+--------------+
+-- | /home        |     4093 |             1575 |       0.3848 |
+-- | /lander-2    |     6500 |             2855 |       0.4392 |
+-- | /lander-3    |     4232 |             2606 |       0.6158 |
+-- | /products    |        1 |                0 |       0.0000 |
+-- +--------------+----------+------------------+--------------+
