@@ -49,6 +49,19 @@ JOIN website_pageviews w ON
 w.website_pageview_id = t.min_pv
 ;
 
+-- +--------------------+--------------+
+-- | website_session_id | landing_page |
+-- +--------------------+--------------+
+-- |             175251 | /products    |
+-- |             175252 | /lander-2    |
+-- |             175253 | /home        |
+-- |             175254 | /lander-2    |
+-- |             175255 | /home        |
+-- |             175256 | /lander-2    |
+-- |             175257 | /lander-3    |
+-- TO BE CONTINUED...
+
+
 DROP TABLE IF EXISTS bounced_sess_only;
 CREATE TEMPORARY TABLE bounced_sess_only -- analyzing if that session had additional page views
 SELECT tt.website_session_id, tt.landing_page, -- will group to find count of total pages
