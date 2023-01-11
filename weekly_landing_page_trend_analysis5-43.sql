@@ -10,6 +10,7 @@
 -- the first page the user views are called "landing pages" and if they only
 -- view one page during their session, this is also called a bounce page
 
+-- PSEUDO: 
 -- my task was analyze ladning page trend analysis by week.
 -- find: bounce rate, home landing page (LP) sessions, lander-1 LP sessions by WEEK
 -- first, find the first page view and total page view count for each session 
@@ -17,6 +18,23 @@
 -- then, turn time to weekly interval in order to find weekly bounce rate, weekly home sessions, weekly lander sessions
 
 
+-- ------------------------------------------------------------------------
+-- EMAIL:
+-- SUBJECT: Help Analyzing Conversion Funnels
+--                                                              September 5, 2012
+-- Hi there!
+
+-- Could you pull the volume of paid search nonbrand traffic landing on /home and /lander-1,
+-- trended weekly since June 1st?  I want to confirm the traffic is all routed correctly.
+
+-- Could you also pull our overall paid search bounce rate trended weekly? I want to make sure
+-- the lander change has improved the overall picture.
+
+-- Thanks!
+-- -Morgan
+----------------------------------------------------------------------------
+
+-- SOLUTION:
 
 USE mavenfuzzyfactory;
 DROP TABLE IF EXISTS temp_table;
