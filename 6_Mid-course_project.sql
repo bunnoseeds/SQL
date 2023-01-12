@@ -486,6 +486,7 @@ GROUP BY 1;
 -- |              25468 | /billing   |     NULL |      NULL |
 -- |              25488 | /billing   |     NULL |      NULL |
 -- |              25508 | /billing   |      879 |     49.99 |
+-- TO BE CONTINUED...
 
 -- ACTUAL OUTPUT:
 -- +------------+-----------+------------------------------+
